@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "arena"
+version = "0.1.0"
+description = ""
+authors = ["fergus <fergusfettes@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = [{version = ">=2.1.0", source="torch_cpu"},]
+ipdb = "^0.13.13"
+ipython = "^8.18.1"
+rich = "^13.7.0"
+transformer-lens = "^1.12.1"
+pytest = "^7.4.4"
+jupyter = "^1.0.0"
+nnsight = "^0.1.14"
+plotly = "^5.18.0"
+
+[[tool.poetry.source]]
+name = "torch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
