@@ -3,7 +3,7 @@ from nnsight import LanguageModel, util
 from nnsight.tracing.Proxy import Proxy
 
 # Load gpt2
-model = LanguageModel("gpt2", device_map="cpu")
+model = LanguageModel("gpt2", device_map="cuda:0")
 
 clean_prompt = "<|endoftext|>After John and Mary went to the store, Mary gave a bottle of milk to"
 corrupted_prompt = "<|endoftext|>After John and Mary went to the store, John gave a bottle of milk to"
