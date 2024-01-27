@@ -620,6 +620,17 @@ files = [
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
+name = "cloudpickle"
+version = "3.0.0"
+description = "Pickler class to extend the standard pickle.Pickler functionality"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "cloudpickle-3.0.0-py3-none-any.whl", hash = "sha256:246ee7d0c295602a036e86369c77fecda4ab17b506496730f2f576d9016fd9c7"},
+    {file = "cloudpickle-3.0.0.tar.gz", hash = "sha256:996d9a482c6fb4f33c1a35335cf8afd065d2a56e973270364840712d9131a882"},
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -1139,8 +1150,8 @@ files = [
 ]
 
 [package.dependencies]
-decorator = {version = "*", markers = "python_version > \"3.6\""}
-ipython = {version = ">=7.31.1", markers = "python_version > \"3.6\""}
+decorator = {version = "*", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
+ipython = {version = ">=7.31.1", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
 tomli = {version = "*", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
 
 [[package]]
@@ -2161,11 +2172,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.22.4,<2", markers = "python_version < \"3.11\""},
-    {version = ">=1.23.2,<2", markers = "python_version == \"3.11\""},
-    {version = ">=1.26.0,<2", markers = "python_version >= \"3.12\""},
-]
+numpy = {version = ">=1.22.4,<2", markers = "python_version < \"3.11\""}
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.7"
@@ -2674,6 +2681,17 @@ files = [
 [package.extras]
 plugins = ["importlib-metadata"]
 windows-terminal = ["colorama (>=0.4.6)"]
+
+[[package]]
+name = "pynvml"
+version = "11.4.1"
+description = "Python Bindings for the NVIDIA Management Library"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "pynvml-11.4.1-py3-none-any.whl", hash = "sha256:d27be542cd9d06558de18e2deffc8022ccd7355bc7382255d477038e7e424c6c"},
+    {file = "pynvml-11.4.1.tar.gz", hash = "sha256:b2e4a33b80569d093b513f5804db0c7f40cfc86f15a013ae7a8e99c5e175d5dd"},
+]
 
 [[package]]
 name = "pytest"
@@ -3430,6 +3448,39 @@ testing = ["h5py (>=3.7.0)", "huggingface_hub (>=0.12.1)", "hypothesis (>=6.70.2
 torch = ["safetensors[numpy]", "torch (>=1.10)"]
 
 [[package]]
+name = "scalene"
+version = "1.5.33.1"
+description = "Scalene: A high-resolution, low-overhead CPU, GPU, and memory profiler for Python with AI-powered optimization suggestions"
+optional = false
+python-versions = ">=3.8,!=3.11.0"
+files = [
+    {file = "scalene-1.5.33.1-cp310-cp310-macosx_12_0_universal2.whl", hash = "sha256:efa98d0bc69c3ea8bcc0a099d45ee6d80aa39634423b6a43dbe75145365589ef"},
+    {file = "scalene-1.5.33.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0694bbf30dc24812ab9f8f77210d272503f1f83a4ec4640083e94cb539fd7009"},
+    {file = "scalene-1.5.33.1-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:49c9fd27484329b11f27d7f09a9203a46f47a0c97588a4798dd8c1cd5f2b6b9c"},
+    {file = "scalene-1.5.33.1-cp310-cp310-win_amd64.whl", hash = "sha256:79ac4779cf8d82543e5bb89dde6c60d63893302470bfe6f271077619aaf65589"},
+    {file = "scalene-1.5.33.1-cp311-cp311-macosx_12_0_universal2.whl", hash = "sha256:a5bdc82f01c2176d9d6bd756133afdc313d970b7da5894b3904f992e530b2952"},
+    {file = "scalene-1.5.33.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:92e6bf33fe1a86ec259786920e14b1b860bf8c6198395077e6e4fc712c465e31"},
+    {file = "scalene-1.5.33.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a908719e20754f6cdb8a338cd0e99cde9146be6606564c14a62cc5c04e5f08d2"},
+    {file = "scalene-1.5.33.1-cp38-cp38-macosx_12_0_universal2.whl", hash = "sha256:36149a516e287578a7c6ec64eb415e30e51abd03ec6d1e5d7888600d77140517"},
+    {file = "scalene-1.5.33.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:02c614ee6bf8d49cb2a7887b1a0f0ead5bf391795c179f546fe483faffd45748"},
+    {file = "scalene-1.5.33.1-cp38-cp38-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ba452664a5f586f1e348be15a3b533a1ab8b6e15827bcfab10f126ed664dca1f"},
+    {file = "scalene-1.5.33.1-cp38-cp38-win_amd64.whl", hash = "sha256:35ef1296fc989d1572937635d14cefe774e4386ee4e7957892feed9cf6a952b1"},
+    {file = "scalene-1.5.33.1-cp39-cp39-macosx_12_0_universal2.whl", hash = "sha256:cfb8c2b3260af22d0cf69d229429407e287056674928d29e2cc3a0931ea03f18"},
+    {file = "scalene-1.5.33.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a1ab6edd6e87a8489b87c1603e3ff8c84ae2ac395bcf7c6406463e3c3251b965"},
+    {file = "scalene-1.5.33.1-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:8fcb3e3170f56312ff59f6600daee0fd84f6307011865a4aee512a71c9739d2e"},
+    {file = "scalene-1.5.33.1-cp39-cp39-win_amd64.whl", hash = "sha256:be0e60698860cb01059018516de03389266ac39b9b004119032cca687fe14822"},
+    {file = "scalene-1.5.33.1.tar.gz", hash = "sha256:bb8da1129802ca90d122d802aaa57adf1a36bb8c1d98850cd4439fa98ecc52b8"},
+]
+
+[package.dependencies]
+cloudpickle = ">=2.2.1"
+Jinja2 = ">=3.0.3"
+psutil = ">=5.9.2"
+pynvml = ">=11.0.0,<11.5"
+rich = ">=10.7.0"
+wheel = ">=0.36.1"
+
+[[package]]
 name = "send2trash"
 version = "1.8.2"
 description = "Send file to trash natively under Mac OS X, Windows and Linux"
@@ -4091,10 +4142,7 @@ datasets = ">=2.7.1"
 einops = ">=0.6.0"
 fancy-einsum = ">=0.0.3"
 jaxtyping = ">=0.2.11"
-numpy = [
-    {version = ">=1.24", markers = "python_version >= \"3.9\" and python_version < \"3.12\""},
-    {version = ">=1.26", markers = "python_version >= \"3.12\" and python_version < \"3.13\""},
-]
+numpy = {version = ">=1.24", markers = "python_version >= \"3.9\" and python_version < \"3.12\""}
 pandas = ">=1.1.5"
 rich = ">=12.6.0"
 torch = ">=1.10,<2.0 || >2.0,<2.1.0 || >2.1.0"
@@ -4337,6 +4385,20 @@ files = [
 docs = ["Sphinx (>=6.0)", "sphinx-rtd-theme (>=1.1.0)"]
 optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
+
+[[package]]
+name = "wheel"
+version = "0.42.0"
+description = "A built-package format for Python"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "wheel-0.42.0-py3-none-any.whl", hash = "sha256:177f9c9b0d45c47873b619f5b650346d632cdc35fb5e4d25058e09c9e581433d"},
+    {file = "wheel-0.42.0.tar.gz", hash = "sha256:c45be39f7882c9d34243236f2d63cbd58039e360f85d0913425fbd7ceea617a8"},
+]
+
+[package.extras]
+test = ["pytest (>=6.0.0)", "setuptools (>=65)"]
 
 [[package]]
 name = "widgetsnbextension"
@@ -4600,5 +4662,5 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "117e66bc69c2154843277113bae0219db7a34bc3bc0dc4362030f1593789688a"
+python-versions = ">=3.10,<3.11"
+content-hash = "cab456c8916adf4f3a5df948f2aae4a018a03230f1c91755852fa26da70233b3"

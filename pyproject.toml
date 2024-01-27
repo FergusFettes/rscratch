@@ -6,7 +6,7 @@ authors = ["fergus <fergusfettes@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.11"
 torch = [{version = ">=2.1.0", source="torch_cpu"},]
 ipdb = "^0.13.13"
 ipython = "^8.18.1"
@@ -16,6 +16,7 @@ pytest = "^7.4.4"
 jupyter = "^1.0.0"
 nnsight = "^0.1.14"
 plotly = "^5.18.0"
+scalene = "^1.5.33.1"
 
 [[tool.poetry.source]]
 name = "torch_cpu"
