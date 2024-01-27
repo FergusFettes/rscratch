@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "arena"
+name = "remote-scratch"
 version = "0.1.0"
 description = ""
 authors = ["fergus <fergusfettes@gmail.com>"]
