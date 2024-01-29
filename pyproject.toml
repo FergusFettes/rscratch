@@ -17,6 +17,7 @@ jupyter = "^1.0.0"
 nnsight = "^0.1.14"
 plotly = "^5.18.0"
 scalene = "^1.5.33.1"
+pyinstrument = "^4.6.2"
 
 [[tool.poetry.source]]
 name = "torch_cpu"
