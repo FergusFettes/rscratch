@@ -27,9 +27,9 @@ patchscope.target.prompt = "a dog is a dog. a rat is a rat. a frog"
 source_len = len(patchscope.source_tokens)
 target_len = len(patchscope.target_tokens)
 
-# # Patch the last two words
-# patchscope.source.position = range(source_len - 2, source_len)
-# patchscope.target.position = range(target_len - 2, target_len)
+# Patch the last two words
+patchscope.source.position = range(source_len - 2, source_len)
+patchscope.target.position = range(target_len - 2, target_len)
 
 patchscope.target.max_new_tokens = 3
 patchscope.get_position_and_layer()
