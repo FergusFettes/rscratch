@@ -1,0 +1,3 @@
+[submodule "nnsight"]
+	path = nnsight
+	url = https://github.com/JadenFiotto-Kaufman/nnsight
