@@ -4,10 +4,21 @@ model = LanguageModel('gpt2', device_map='cpu')
 
 
 def decoder(x):
-    return model.lm_head(model.transformer.ln_f(x))
+    with model.invoke("null") as invoker:
+        return model.lm_head(model.transformer.ln_f(x)).save()
 
 
 prompt = 'The Eiffel Tower is in the city of'
+with model.invoke(prompt) as invoker:
+    layer_output_1 = model.transformer.h[0].output[0].save()
+
+
+# Clone the tensor
+layer_output_1 = layer_output_1.clone().save()
+logits = decoder(layer_output_1)
+
+out_text = model.tokenizer.decode(logits.value.argmax(dim=-1).squeeze())
+
 
 # with model.generate(max_new_tokens=30) as generator:
 #     with generator.invoke(prompt) as invoker:
